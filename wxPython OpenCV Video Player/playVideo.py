@@ -1,9 +1,11 @@
 import wx
 import cv2.cv as cv
 
-# Updated for OpenCV 2.3.1
+# Demonstrates how to use wxPython and OpenCV to create a video player
 #
 # Written by lassytouton
+#
+# Works with OpenCV 2.3.1
 #
 # Borrows from "Playing a movie" (http://opencv.willowgarage.com/wiki/wxpython)
 #

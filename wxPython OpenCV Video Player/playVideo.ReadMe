@@ -1,1 +1,10 @@
-The icons film.png, control_stop.png, and control_play.png were sourced from Mark James' Silk icon set 1.3 at http://www.famfamfam.com/lab/icons/silk/
+Demonstrates how to use wxPython and OpenCV to create a video player
+
+Written by lassytouton
+
+Works with OpenCV 2.3.1
+
+Borrows from "Playing a movie" (http://opencv.willowgarage.com/wiki/wxpython)
+
+Icons film.png, control_stop.png, and control_play.png were sourced from
+Mark James' Silk icon set 1.3 at http://www.famfamfam.com/lab/icons/silk/
