@@ -24,7 +24,7 @@ class CvVideoFrame(wx.Frame):
     ID_TIMER_PLAY = 5
 
     def __init__(self, parent):
-        wx.Frame.__init__(self, parent, -1, title = "Video Player", style = wx.DEFAULT_FRAME_STYLE & ~wx.RESIZE_BORDER)
+        wx.Frame.__init__(self, parent, -1, title = "wxPython OpenCV Video Player - Version 1.0.0", style = wx.DEFAULT_FRAME_STYLE & ~wx.RESIZE_BORDER)
 
         self.SetDoubleBuffered(True)
 

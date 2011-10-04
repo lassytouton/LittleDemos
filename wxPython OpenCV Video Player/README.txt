@@ -1,1 +1,0 @@
-playVideo.py demonstrates how to use wxPython and OpenCV to create a video player
