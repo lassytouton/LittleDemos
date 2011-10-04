@@ -87,7 +87,7 @@ class CvVideoFrame(wx.Frame):
     def onOpenFile(self, evt):
         filters = 'AVI files (*.avi)|*.avi|All files (*.*)|*.*'
 
-        dialog = wx.FileDialog ( None, message = 'Select AVI files....', wildcard = filters, style = wx.OPEN | wx.MULTIPLE )
+        dialog = wx.FileDialog(None, message = 'Select AVI files....', wildcard = filters, style = wx.OPEN)
 
         if dialog.ShowModal() == wx.ID_OK:
             videoFile = dialog.GetPath()
