@@ -1,0 +1,7 @@
+    % lassytouton, 2011
+    %
+    % Octave/MATLAB JSON parser (compatible with Octave 3.2.4 and MATLAB R2011b)
+    %
+    % This parser is basically François Glineur's parser from the MATLAB File Exchange,
+    % http://www.mathworks.com/matlabcentral/fileexchange/23393-another-json-parser,
+    % with minor modifications to make it compatible with Octave
