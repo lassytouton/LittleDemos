@@ -23,7 +23,7 @@ PROGRAM CLIENT
     TYPE T_CLIENT_SERVER_MESSAGE
         SEQUENCE
             ! The fields in this TYPE must share memory space with a dummy CHARACTER variable
-            ! In this instance the X field from the first UNION MAP and the buffer CHARACTER variable from the
+            ! In this instance the ClientSendCount field from the first UNION MAP and the buffer CHARACTER variable from the
             ! second UNION map both start at the same memory address (i.e. they overlay one another in memory)
             ! The buffer CHARACTER variable is required because the Win32 send and recv routines accept a
             ! CHARACTER variable whose address is the starting memory address of the message to be sent or received,
