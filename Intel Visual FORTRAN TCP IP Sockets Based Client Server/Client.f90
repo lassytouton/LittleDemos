@@ -133,7 +133,7 @@ INTEGER FUNCTION GetConnection(connection)
     ENDIF
 
     host = '127.0.0.1'
-    port = 5000
+    port = 55000
 
     connectionInfo%sockAddrIn%sin_family = AF_INET
     connectionInfo%sockAddrIn%sin_port = htons(port)
@@ -164,17 +164,27 @@ INTEGER FUNCTION SendMsg(connection, buffer, size)
 
     CHARACTER*(size) buffer
 
+    INTEGER bytesSent
+    INTEGER bytesSentTotal
+
     INTEGER status
 
 
     SendMsg = SUCCESS
 
-    status = send(connection, buffer, size, 0)
-    IF (status .EQ. SOCKET_ERROR) THEN
-        SendMsg = WSAGetLastError()
+    bytesSent = 0
+    bytesSentTotal = 0
 
-        RETURN
-    ENDIF
+    DO WHILE (bytesSentTotal < size)
+        bytesSent = send(connection, buffer(bytesSentTotal + 1:bytesSentTotal + 1), (size - bytesSentTotal), 0)
+        IF (bytesSent .EQ. SOCKET_ERROR) THEN
+            SendMsg = WSAGetLastError()
+
+            RETURN
+        ENDIF
+        
+        bytesSentTotal = bytesSentTotal + bytesSent
+    END DO
 
     RETURN
 END
