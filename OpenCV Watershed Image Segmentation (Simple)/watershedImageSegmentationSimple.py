@@ -10,17 +10,17 @@ cv.NamedWindow("imgOriginal", 1);
 
 cv.NamedWindow("imgMarkers", 1);
 
-cv.NamedWindow("imgWatershedTransform", 1);
+cv.NamedWindow("imgWatershed", 1);
 
 imgOriginal = cv.LoadImage("TouchingCircles.png");
 
 imgMarkers = cv.CreateImage(cv.GetSize(imgOriginal), cv.IPL_DEPTH_8U, 1)
 
-imgWatershedTransform = cv.CreateImage(cv.GetSize(imgOriginal), cv.IPL_DEPTH_32S, 1)
+imgWatershed = cv.CreateImage(cv.GetSize(imgOriginal), cv.IPL_DEPTH_32S, 1)
 
 cv.Zero(imgMarkers)
 
-cv.Zero(imgWatershedTransform)
+cv.Zero(imgWatershed)
 
 # create markers for the background, upper circle, and lower circle
 # markers are differentiated by colour
@@ -35,15 +35,15 @@ cv.Circle(imgMarkers, (180, 180), 3, (160, 160, 160), -1)
 cv.Circle(imgMarkers, (320, 320), 3, (240, 240, 240), -1)
 
 # cv.IPL_DEPTH_32S images are divided by 256 on display so scale accordingly
-cv.ConvertScale(imgMarkers, imgWatershedTransform, 256)
+cv.ConvertScale(imgMarkers, imgWatershed, 256)
 
-cv.Watershed(imgOriginal, imgWatershedTransform)
+cv.Watershed(imgOriginal, imgWatershed)
 
 cv.ShowImage("imgOriginal", imgOriginal)
 
 cv.ShowImage("imgMarkers", imgMarkers)
 
-cv.ShowImage("imgWatershedTransform", imgWatershedTransform)
+cv.ShowImage("imgWatershed", imgWatershed)
 
 while True:
     c = cv.WaitKey(0) % 0x100
