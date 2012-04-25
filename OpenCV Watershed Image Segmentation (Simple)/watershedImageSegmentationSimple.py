@@ -34,14 +34,16 @@ cv.Circle(imgMarkers, (180, 180), 3, (160, 160, 160), -1)
 # lower circle marker, identified by colour (240, 240, 240)
 cv.Circle(imgMarkers, (320, 320), 3, (240, 240, 240), -1)
 
-# cv.IPL_DEPTH_32S images are divided by 256 on display so scale accordingly
-cv.ConvertScale(imgMarkers, imgWatershed, 256)
+cv.ConvertScale(imgMarkers, imgWatershed, 1)
 
 cv.Watershed(imgOriginal, imgWatershed)
 
 cv.ShowImage("imgOriginal", imgOriginal)
 
 cv.ShowImage("imgMarkers", imgMarkers)
+
+# cv.IPL_DEPTH_32S images are divided by 256 on display so scale accordingly
+cv.ConvertScale(imgWatershed, imgWatershed, 256)
 
 cv.ShowImage("imgWatershed", imgWatershed)
 
