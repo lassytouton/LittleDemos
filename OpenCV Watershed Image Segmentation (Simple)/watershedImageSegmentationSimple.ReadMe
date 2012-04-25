@@ -1,0 +1,5 @@
+Demonstrates how to use OpenCV's Watershed function to segment an image
+
+Written by lassytouton
+
+Works with OpenCV 2.3.1
