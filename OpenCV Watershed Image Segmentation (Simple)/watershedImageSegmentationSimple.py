@@ -34,8 +34,10 @@ cv.Circle(imgMarkers, (180, 180), 3, (160, 160, 160), -1)
 # lower circle marker, identified by colour (240, 240, 240)
 cv.Circle(imgMarkers, (320, 320), 3, (240, 240, 240), -1)
 
+# seed imgWatershed with the markers for the background, upper circle, and lower circle
 cv.ConvertScale(imgMarkers, imgWatershed, 1)
 
+# this is where the magic happens...
 cv.Watershed(imgOriginal, imgWatershed)
 
 cv.ShowImage("imgOriginal", imgOriginal)
@@ -47,9 +49,11 @@ cv.ConvertScale(imgWatershed, imgWatershed, 256)
 
 cv.ShowImage("imgWatershed", imgWatershed)
 
+Esc = 27
+
 while True:
-    c = cv.WaitKey(0) % 0x100
-    if c == 27 or c == ord('q'):
+    keyPressed = cv.WaitKey(0) % 0x100
+    if ((keyPressed == Esc) or (keyPressed == ord('q'))):
         break
 
 cv.DestroyAllWindows()
