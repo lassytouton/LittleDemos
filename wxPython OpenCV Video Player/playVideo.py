@@ -40,7 +40,7 @@ class CvVideoFrame(wx.Frame):
 
         self.ToolBar = self.CreateToolBar(style = wx.TB_BOTTOM | wx.TB_FLAT)
 
-        openFile = self.ToolBar.AddLabelTool(self.ID_OPEN, '', wx.Bitmap('film.png'))
+        openFile = self.ToolBar.AddLabelTool(self.ID_OPEN, '', wx.Bitmap('video.png'))
         self.ToolBar.AddSeparator()
 
         self.slider = wx.Slider(self.ToolBar, self.ID_SLIDER, 0, 0, self.DEFAULT_TOTAL_FRAMES - 1, None, (self.DEFAULT_FRAME_WIDTH - 100, 50), wx.SL_HORIZONTAL)
