@@ -9,8 +9,8 @@ import cv2.cv as cv
 #
 # Borrows from "Playing a movie" (http://opencv.willowgarage.com/wiki/wxpython)
 #
-# Icons film.png, control_stop.png, and control_play.png were sourced from
-# Mark James' Silk icon set 1.3 at http://www.famfamfam.com/lab/icons/silk/
+# Icons video.png, control_play.png, and control_stop.png were sourced from
+# Ed Merritt's Vaga icon set at http://www.iconfinder.com/search/?q=iconset%3Avaga
 
 class CvVideoFrame(wx.Frame):
     DEFAULT_TOTAL_FRAMES = 300
