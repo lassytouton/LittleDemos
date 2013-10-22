@@ -1,0 +1,29 @@
+Demonstrates how to create a video player using OpenCV and wxPython
+
+
+Copyright (C) 2013  lassytouton
+
+This application is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 3 of the License, or (at your option) any later version.
+
+This application is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this application; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+
+
+Works with OpenCV 2.4.5
+
+Borrows from "Playing a movie" (http://opencv.willowgarage.com/wiki/wxpython)
+
+Icon camera.ico was sourced from
+Mart's (Marco Martin) Glaze icon set at http://www.iconfinder.com/search?q=iconset%3Aglaze
+
+Icons video.png, play.png, stop.png, and save.png were sourced from
+Ed Merritt's Vaga icon set at http://www.iconfinder.com/search/?q=iconset%3Avaga

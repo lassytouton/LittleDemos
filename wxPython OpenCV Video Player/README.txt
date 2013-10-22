@@ -1,0 +1,1 @@
+The wxPython OpenCV Video Player project demonstrates how to create a video player using OpenCV and wxPython.
