@@ -137,8 +137,6 @@ class VideoFrame(wx.Frame):
     def __init__(self, parent):
         wx.Frame.__init__(self, parent, -1, title = "viewer - version 1.1.0", style = wx.DEFAULT_FRAME_STYLE)
 
-        os.environ["PATH"] = "%s;%s" % (os.path.abspath("./"), os.environ["PATH"]) 
-
         iconBundleName = os.path.join(os.path.dirname(pathExe), "icons/Glaze/camera.ico")
         if (os.path.exists(iconBundleName)):
             iconBundle = wx.IconBundleFromFile(iconBundleName, wx.BITMAP_TYPE_ANY)
