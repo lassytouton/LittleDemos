@@ -393,7 +393,7 @@ Glaze
 
 http://www.iconfinder.com/search?q=iconset%3Aglaze
 
-The movie icon from the Glaze icon set is used.
+The camera icon from the Glaze icon set is used.
 
 License::
 
