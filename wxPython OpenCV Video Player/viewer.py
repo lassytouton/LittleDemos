@@ -34,7 +34,20 @@ import multiprocessing
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 #
 #
-# Works with OpenCV 2.4.5
+# Licenses and Acknowledgements for Incorporated Software
+# =======================================================
+#
+# The following libraries are incorporated into or used by the software:
+#
+#     - opencv
+#
+# These are governed by their own license, which can be found in the
+# "ThirdPartyLicense.txt" file installed with this software.
+#
+# Notes
+# =====
+#
+# A copy of this license is installed with the software.
 #
 # Borrows from "Playing a movie" (http://opencv.willowgarage.com/wiki/wxpython)
 #
@@ -364,7 +377,7 @@ class VideoFrame(wx.Frame):
             self.onStop(None)
 
     def onOpenVideo(self, evt):
-        filters = "AVI files (*.avi)|*.avi|All files (*.*)|*.*"
+        filters = "All files (*.*)|*.*"
 
         dialog = wx.FileDialog(None, message = "Select video file...", defaultDir = "", wildcard = filters, style = wx.OPEN)
 
@@ -398,9 +411,9 @@ class VideoFrame(wx.Frame):
             basename = os.path.splitext(os.path.basename(self.video.File))[0] + "-"
 
             basename = basename[:-1]
-    
+
             imageSave = os.path.join(dirname, "%s-%s.png" % (basename, time.strftime("%Y-%m-%d-%H-%M-%S")))
-    
+
             if os.path.isfile(imageSave):
                 dlg = wx.MessageDialog(self,
                                        "%s exists... do you wish to overwrite?" % (imageSave),
@@ -410,7 +423,7 @@ class VideoFrame(wx.Frame):
                 dlg.Destroy()
                 if result != wx.ID_OK:
                     return
-    
+
             cv2.imwrite(imageSave, self.imgVideo)
 
     def onUpdateUI(self, evt):
@@ -503,12 +516,23 @@ class VideoFrame(wx.Frame):
                       "You should have received a copy of the GNU Lesser General Public\n"
                       "License along with this application; if not, write to the Free Software\n"
                       "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA\n\n\n"
-                      "Works with OpenCV 2.4.5\n\n"
-                      "Borrows from \"Playing a movie\" (http://opencv.willowgarage.com/wiki/wxpython)\n\n"
+                      "Licenses and Acknowledgements for Incorporated Software\n"
+                      "===============================================\n\n"
+                      "The following libraries are incorporated into or used by the software:\n\n"
+                      "    - opencv\n\n"
+                      "These are governed by their own respective licenses, which can be\n"
+                      "found in the \"ThirdPartyLicense.txt\" file installed with this software.\n\n"
+                      "Notes\n"
+                      "=====\n\n"
+                      "A copy of this license is installed with the software.\n\n"
+                      "Borrows from \"Playing a movie\"\n"
+                      "(http://opencv.willowgarage.com/wiki/wxpython)\n\n"
                       "Icon camera.ico was sourced from\n"
-                      "Mart's (Marco Martin) Glaze icon set at http://www.iconfinder.com/search?q=iconset%3Aglaze\n\n"
+                      "Mart's (Marco Martin) Glaze icon set at\n"
+                      "http://www.iconfinder.com/search?q=iconset%3Aglaze\n\n"
                       "Icons video.png, play.png, stop.png, and save.png were sourced from\n"
-                      "Ed Merritt's Vaga icon set at http://www.iconfinder.com/search/?q=iconset%3Avaga",
+                      "Ed Merritt's Vaga icon set at\n"
+                      "http://www.iconfinder.com/search/?q=iconset%3Avaga",
                       "viewer - version 1.1.0", wx.OK | wx.ICON_INFORMATION)
 
     def onClose(self, evt):
